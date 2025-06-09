@@ -4,6 +4,7 @@ import { PopularGoalsSection } from "@/components/popular-goals-section"
 import { HowItWorksSection } from "@/components/how-it-works-section"
 import { UniqueSellingPointsSection } from "@/components/unique-selling-points-section"
 import { PricingSection } from "@/components/pricing-section"
+import { CourseCategoriesSection } from "@/components/course-categories-section"
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <HowItWorksSection />
       <UniqueSellingPointsSection />
       <PricingSection />
+      <CourseCategoriesSection />
     </div>
   );
 }

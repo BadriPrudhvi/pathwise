@@ -146,11 +146,11 @@
 
 ---
 
-* [ ] Create `CourseCategoriesSection` component
+* [x] Create `CourseCategoriesSection` component
 
-  * [ ] 2-column layout
-  * [ ] Clickable category links: "Web Dev", "AI", "Productivity", "Soft Skills", etc.
-  * [ ] Each link can optionally lead to `/start` with a prefilled goal
+  * [x] 2-column layout
+  * [x] Clickable category links: "Web Dev", "AI", "Productivity", "Soft Skills", etc.
+  * [x] Each link can optionally lead to `/start` with a prefilled goal
 
 ---
 
