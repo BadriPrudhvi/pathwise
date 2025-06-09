@@ -40,22 +40,6 @@ export function Footer() {
                     Blog
                   </Link>
                 </li>
-                <li>
-                  <Link 
-                    href="/careers" 
-                    className="text-gray-600 hover:text-gray-900 text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 rounded"
-                  >
-                    Careers
-                  </Link>
-                </li>
-                <li>
-                  <Link 
-                    href="/press" 
-                    className="text-gray-600 hover:text-gray-900 text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 rounded"
-                  >
-                    Press
-                  </Link>
-                </li>
               </ul>
             </nav>
           </div>
@@ -81,22 +65,6 @@ export function Footer() {
                     Learning Paths
                   </Link>
                 </li>
-                <li>
-                  <Link 
-                    href="/mentors" 
-                    className="text-gray-600 hover:text-gray-900 text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 rounded"
-                  >
-                    Mentors
-                  </Link>
-                </li>
-                <li>
-                  <Link 
-                    href="/certificates" 
-                    className="text-gray-600 hover:text-gray-900 text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 rounded"
-                  >
-                    Certificates
-                  </Link>
-                </li>
               </ul>
             </nav>
           </div>
@@ -106,14 +74,6 @@ export function Footer() {
             <h3 className="text-gray-900 font-semibold mb-4">Support</h3>
             <nav aria-label="Support navigation">
               <ul className="space-y-3">
-                <li>
-                  <Link 
-                    href="/help" 
-                    className="text-gray-600 hover:text-gray-900 text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 rounded"
-                  >
-                    Help Center
-                  </Link>
-                </li>
                 <li>
                   <Link 
                     href="/contact" 
@@ -128,14 +88,6 @@ export function Footer() {
                     className="text-gray-600 hover:text-gray-900 text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 rounded"
                   >
                     Feedback
-                  </Link>
-                </li>
-                <li>
-                  <Link 
-                    href="/community" 
-                    className="text-gray-600 hover:text-gray-900 text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 rounded"
-                  >
-                    Community
                   </Link>
                 </li>
               </ul>
