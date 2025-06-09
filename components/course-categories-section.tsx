@@ -79,7 +79,7 @@ export function CourseCategoriesSection() {
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl mb-4">
-            Master Skills That Matter in Today's World
+            Master Skills That Matter in Today&apos;s World
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Choose from our most in-demand learning categories. Our AI will create a personalized curriculum 
