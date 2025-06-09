@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
@@ -68,12 +69,13 @@ export function PopularGoalsSection() {
             >
               <CardContent className="p-0">
                 {/* Full-width Image */}
-                <div className="aspect-video w-full overflow-hidden">
-                  <img
+                <div className="aspect-video w-full overflow-hidden relative">
+                  <Image
                     src={goal.image}
                     alt={`${goal.title} learning path illustration`}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                    loading="lazy"
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-300"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                 </div>
                 
