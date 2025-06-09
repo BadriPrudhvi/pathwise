@@ -158,16 +158,16 @@
 
 ---
 
-* [ ] Create `Footer` component
+* [x] Create `Footer` component
 
-  * [ ] 5-column grid layout
+  * [x] 5-column grid layout
 
     * **Col 1**: Logo + short mission: "Helping curious minds learn better."
     * **Col 2**: About, Blog, Careers
     * **Col 3**: Courses, Learning Paths, Mentors
     * **Col 4**: Help Center, Contact, Feedback
     * **Col 5**: Social Media icons
-* [ ] Background: light green `#D1FAE5`
+* [x] Background: light green `#D1FAE5`
 
 ---
 
