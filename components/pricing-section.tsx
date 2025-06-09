@@ -57,7 +57,7 @@ export function PricingSection() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {plans.map((plan, index) => (
+          {plans.map((plan) => (
             <Card 
               key={plan.name} 
               className={`relative transition-all duration-300 hover:shadow-xl ${
