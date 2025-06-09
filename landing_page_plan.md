@@ -1,4 +1,3 @@
-
 # 🌐 Pathwise — Landing Page Implementation Checklist (MVP Phase 1)
 ---
 
@@ -35,19 +34,19 @@
 
 ---
 
-* [ ] Create a `HeroSection` component
+* [x] Create a `HeroSection` component
 
-  * [ ] **H1:** "BUILD YOUR PERSONALIZED LEARNING JOURNEY"
-  * [ ] **Subheadline:** "Let AI help you master any skill – one goal at a time."
-  * [ ] **Search Bar:**
+  * [x] **H1:** "BUILD YOUR PERSONALIZED LEARNING JOURNEY"
+  * [x] **Subheadline:** "Let AI help you master any skill – one goal at a time."
+  * [x] **Search Bar:**
 
-    * [ ] `Input` component with placeholder: `"What do you want to learn?"`
-    * [ ] `Button` labeled `"Get Started"` — navigates to `/start`
-  * [ ] **Image**:
+    * [x] `Input` component with placeholder: `"What do you want to learn?"`
+    * [x] `Button` labeled `"Get Started"` — navigates to `/start`
+  * [x] **Image**:
 
-    * [ ] Responsive full-width image of diverse learners from Unsplash
-    * [ ] Add border using `border` utility
-* [ ] Wrap section in a `div` with green background `#D1FAE5`
+    * [x] Responsive full-width image of diverse learners from Unsplash
+    * [x] Add border using `border` utility
+* [x] Wrap section in a `div` with green background `#D1FAE5`
 
 ---
 
@@ -55,16 +54,16 @@
 
 ---
 
-* [ ] Create `PopularGoalsSection` component
+* [x] Create `PopularGoalsSection` component
 
-  * [ ] Centered `H2`: "Our Most Pursued Learning Paths"
-  * [ ] 3-Column grid layout
-* [ ] For each `Card`:
+  * [x] Centered `H2`: "Our Most Pursued Learning Paths"
+  * [x] 3-Column grid layout
+* [x] For each `Card`:
 
-  * [ ] Full-width image (e.g., Unsplash images of people studying/coding)
-  * [ ] Short paragraph (1–2 lines)
-  * [ ] `Avatar` + instructor name/title
-  * [ ] Assign alternating background colors: `#FEF9C3`, `#FCE7F3`, `#D1FAE5`
+  * [x] Full-width image (e.g., Unsplash images of people studying/coding)
+  * [x] Short paragraph (1–2 lines)
+  * [x] `Avatar` + instructor name/title
+  * [x] Assign alternating background colors: `#FEF9C3`, `#FCE7F3`, `#D1FAE5`
 
 ---
 
@@ -72,21 +71,21 @@
 
 ---
 
-* [ ] Create `HowItWorksSection` component
+* [x] Create `HowItWorksSection` component
 
-  * [ ] 2-column layout:
+  * [x] 2-column layout:
 
-    * [ ] **Left:** Image of a dashboard UI (mockup or Unsplash)
-    * [ ] **Right:**
+    * [x] **Left:** Image of a dashboard UI (mockup or Unsplash)
+    * [x] **Right:**
 
-      * [ ] `H2`: "How Pathwise Helps You Learn Smarter"
-      * [ ] Supporting paragraph
-      * [ ] Bullet list:
+      * [x] `H2`: "How Pathwise Helps You Learn Smarter"
+      * [x] Supporting paragraph
+      * [x] Bullet list:
 
-        * [ ] Personalized curriculum
-        * [ ] Real-time progress tracking
-        * [ ] AI-powered feedback
-      * [ ] Each item includes checkmark icon (`CheckCircle` from lucide)
+        * [x] Personalized curriculum
+        * [x] Real-time progress tracking
+        * [x] AI-powered feedback
+      * [x] Each item includes checkmark icon (`CheckCircle` from lucide)
 
 ---
 
@@ -94,15 +93,16 @@
 
 ---
 
-* [ ] Create `UniqueSellingPointsSection` component
+* [x] Create `UniqueSellingPointsSection` component
 
-  * [ ] Centered `H2`: "What Makes Pathwise Unique"
-  * [ ] 3-column grid of features
-* [ ] Each card contains:
+  * [x] Centered `H2`: "What Makes Us Different"
+  * [x] 4-column grid of features (responsive: 2-col on md, 4-col on lg)
+  * [x] Updated content to reflect MVP features (AI personalization, conversational learning, adaptive tracking, dynamic curriculum)
+* [x] Each card contains:
 
-  * [ ] Icon (e.g., brain, speedometer, map)
-  * [ ] `H3` title
-  * [ ] Supporting paragraph
+  * [x] Icon (Brain, MessageCircle, TrendingUp, Zap from lucide-react)
+  * [x] `H3` title
+  * [x] Supporting paragraph aligned with Pathwise MVP features
 
 ---
 
@@ -110,17 +110,17 @@
 
 ---
 
-* [ ] Create `MentorShowcaseSection` component
+* [x] Create `MentorShowcaseSection` component
 
-  * [ ] Centered `H2`: “We Work With Amazing Mentors”
-  * [ ] 3-column layout
-* [ ] Each `Card` includes:
+  * [x] Centered `H2`: "We Work With Amazing Mentors"
+  * [x] 3-column layout
+* [x] Each `Card` includes:
 
-  * [ ] `Avatar`
-  * [ ] `H3`: Mentor name + title
-  * [ ] Quote or bio text
-  * [ ] Social icons (LinkedIn, Twitter) bottom-right
-  * [ ] Alternating background colors: `#F3E8FF`, `#FEF9C3`, `#FCE7F3`
+  * [x] `Avatar`
+  * [x] `H3`: Mentor name + title
+  * [x] Quote or bio text
+  * [x] Social icons (LinkedIn, Twitter) bottom-right
+  * [x] Alternating background colors: `#F3E8FF`, `#FEF9C3`, `#FCE7F3`
 
 ---
 
@@ -128,17 +128,17 @@
 
 ---
 
-* [ ] Create `PricingSection` component
+* [x] Create `PricingSection` component
 
-  * [ ] Centered `H2`: “Simple, Transparent Pricing”
-  * [ ] 3-column layout
-* [ ] Each `Card` includes:
+  * [x] Centered `H2`: "Simple, Transparent Pricing"
+  * [x] 3-column layout
+* [x] Each `Card` includes:
 
-  * [ ] `H3` Title: "Starter", "Pro", "Premium"
-  * [ ] Price per month
-  * [ ] Bullet list of features
-  * [ ] `Button`: "Choose Plan"
-* [ ] Add hover effect and border for visual emphasis
+  * [x] `H3` Title: "Free", "Pro"
+  * [x] Price: $0 forever, $39/month as per updated MVP monetization plan
+  * [x] Bullet list of features aligned with MVP features
+  * [x] `Button`: "Get Started Free", "Start Pro Trial"
+* [x] Add hover effect and border for visual emphasis
 
 ---
 
@@ -162,7 +162,7 @@
 
   * [ ] 5-column grid layout
 
-    * **Col 1**: Logo + short mission: “Helping curious minds learn better.”
+    * **Col 1**: Logo + short mission: "Helping curious minds learn better."
     * **Col 2**: About, Blog, Careers
     * **Col 3**: Courses, Learning Paths, Mentors
     * **Col 4**: Help Center, Contact, Feedback
@@ -175,7 +175,7 @@
 
 ---
 
-* [ ] Ensure all components are mobile-friendly using Tailwind’s responsive utilities
+* [ ] Ensure all components are mobile-friendly using Tailwind's responsive utilities
 * [ ] Use `aria` labels where needed (e.g., nav links, input fields)
 * [ ] Verify color contrast across text and backgrounds
 
