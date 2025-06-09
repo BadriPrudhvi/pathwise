@@ -15,6 +15,7 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://pathwise.ai'),
   title: "Pathwise - AI-Powered Personalized Learning Platform",
   description: "Master any skill with AI-powered personalized learning paths. Get goal scoping, skill assessment, adaptive curriculum, and real-time progress tracking. Start your learning journey today.",
   keywords: [
