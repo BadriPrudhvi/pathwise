@@ -1,0 +1,205 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Coding Standards - Pathwise
+
+## TypeScript Configuration
+
+### Strict Type Safety
+The project uses strict TypeScript settings defined in [tsconfig.json](mdc:tsconfig.json):
+- `"strict": true` - Enables all strict type checking options
+- `"noEmit": true` - Type checking only, build handled by Next.js
+- `"skipLibCheck": true` - Skip type checking of declaration files for faster builds
+
+### Type Conventions
+- **Interfaces**: Use PascalCase (e.g., `UserProfile`, `LearningGoal`)
+- **Types**: Use PascalCase for custom types (e.g., `CourseStatus`, `SkillLevel`)
+- **Generics**: Use single uppercase letters (e.g., `T`, `K`, `V`)
+- **Props**: Always define component props interfaces (e.g., `ButtonProps`)
+
+## Code Style & Formatting
+
+### ESLint Configuration
+The project follows Next.js recommended linting rules defined in [eslint.config.mjs](mdc:eslint.config.mjs):
+- Next.js core web vitals rules
+- TypeScript-specific rules
+- React best practices
+
+### Formatting Conventions
+- **Indentation**: 2 spaces (configured in Next.js defaults)
+- **Semicolons**: Required at end of statements
+- **Quotes**: Double quotes for strings
+- **Trailing Commas**: Required for multi-line objects/arrays
+
+## Component Architecture
+
+### Component Structure
+Following patterns established in [components/ui/](mdc:components/ui):
+
+```typescript
+// Example component structure
+interface ComponentProps {
+  // Props with clear types
+}
+
+const Component = React.forwardRef<HTMLElement, ComponentProps>(
+  ({ prop1, prop2, ...props }, ref) => {
+    // Component logic
+    return (
+      <Element ref={ref} {...props}>
+        {/* Component content */}
+      </Element>
+    )
+  }
+)
+Component.displayName = "Component"
+
+export { Component }
+```
+
+### Component Patterns
+- **Single Responsibility**: One component per file
+- **Forwarded Refs**: Use `React.forwardRef` for interactive components
+- **Props Spreading**: Spread remaining props with `{...props}`
+- **Display Names**: Always set `displayName` for debugging
+- **Compound Components**: Use for complex UI patterns (Dialog, Sheet, etc.)
+
+## Styling Conventions
+
+### Tailwind CSS Usage
+- **Utility First**: Prefer utility classes over custom CSS
+- **Class Merging**: Use `cn()` utility from [lib/utils.ts](mdc:lib/utils.ts) for conditional classes
+- **Responsive Design**: Mobile-first responsive design with Tailwind breakpoints
+- **Design System**: Consistent spacing, colors, and typography using Tailwind tokens
+
+### CSS Class Organization
+```typescript
+// Example of proper class organization
+const classes = cn(
+  // Base styles
+  "flex items-center justify-center",
+  // State styles
+  "hover:bg-accent hover:text-accent-foreground",
+  // Conditional styles
+  variant === "outline" && "border border-input",
+  // Custom classes
+  className
+)
+```
+
+## State Management Patterns
+
+### React Hooks Usage
+- **Built-in Hooks**: Prefer React's built-in hooks
+- **Custom Hooks**: Create reusable logic in [hooks/](mdc:hooks) directory
+- **Hook Dependencies**: Always include proper dependency arrays
+- **Effect Cleanup**: Return cleanup functions from useEffect when needed
+
+### Custom Hook Patterns
+Following the pattern in [hooks/use-mobile.ts](mdc:hooks/use-mobile.ts):
+- **Naming**: Prefix with `use-` and use kebab-case
+- **Return Values**: Use objects for multiple return values
+- **TypeInterface**: Fully type all parameters and return values
+
+## Error Handling
+
+### Error Boundaries
+- Use React Error Boundaries for component error handling
+- Provide fallback UI for graceful degradation
+
+### Async Operations
+```typescript
+// Preferred async/await pattern
+try {
+  const result = await apiCall()
+  // Handle success
+} catch (error) {
+  console.error('Operation failed:', error)
+  // Handle error appropriately
+}
+```
+
+### Form Validation
+- Use react-hook-form with Zod for form validation
+- Provide clear, user-friendly error messages
+- Validate both client-side and server-side
+
+## Import/Export Standards
+
+### Import Organization
+1. **External libraries** (React, Next.js, third-party)
+2. **Internal components** (using `@/` alias)
+3. **Utilities and hooks** (using `@/` alias)
+4. **Types and interfaces**
+5. **Relative imports** (when necessary)
+
+### Export Patterns
+```typescript
+// Named exports for components
+export { Button } from "./button"
+
+// Default exports for pages and layouts
+export default function HomePage() { }
+
+// Type exports
+export type { ButtonProps }
+```
+
+## Performance Considerations
+
+### Bundle Optimization
+- Use dynamic imports for code splitting when appropriate
+- Lazy load components that aren't immediately needed
+- Optimize images using Next.js Image component
+
+### React Patterns
+- Use `React.memo` for expensive components
+- Implement proper key props for list rendering
+- Avoid inline object/function creation in render
+
+## Testing Patterns (Future)
+
+### Component Testing
+- Test component behavior, not implementation
+- Use React Testing Library for component tests
+- Mock external dependencies appropriately
+
+### Type Testing
+- Ensure TypeScript compilation catches type errors
+- Use type-only imports when possible
+
+## Security Practices
+
+### Data Validation
+- Validate all user inputs using Zod schemas
+- Sanitize data before displaying
+- Use TypeScript for compile-time type safety
+
+### Environment Variables
+- Store sensitive data in environment variables
+- Use `.env.local` for local development
+- Never commit sensitive keys to version control
+
+## Documentation Standards
+
+### Code Comments
+- Use JSDoc for function/component documentation
+- Explain complex logic with inline comments
+- Document type definitions with TSDoc
+
+### Component Documentation
+```typescript
+/**
+ * A reusable button component with multiple variants
+ * @param variant - The visual style variant
+ * @param size - The size of the button
+ * @param disabled - Whether the button is disabled
+ */
+interface ButtonProps {
+  variant?: "default" | "destructive" | "outline"
+  size?: "default" | "sm" | "lg"
+  disabled?: boolean
+}
+```

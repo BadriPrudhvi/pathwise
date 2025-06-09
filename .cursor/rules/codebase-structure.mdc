@@ -1,0 +1,127 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Codebase Structure - Pathwise
+
+## Directory Organization
+
+### Root Level Structure
+```
+pathwise/
+├── app/                 # Next.js App Router pages and layouts
+├── components/          # Reusable UI components
+├── hooks/              # Custom React hooks
+├── lib/                # Shared utilities and configurations
+├── public/             # Static assets
+└── [config files]      # Configuration files
+```
+
+## App Directory (Next.js App Router)
+
+The [app/](mdc:app) directory follows Next.js 13+ App Router conventions:
+
+- [app/page.tsx](mdc:app/page.tsx) - Homepage component
+- [app/layout.tsx](mdc:app/layout.tsx) - Root layout with global styles and fonts
+- [app/globals.css](mdc:app/globals.css) - Global CSS including Tailwind base styles
+- [app/favicon.ico](mdc:app/favicon.ico) - Site favicon
+
+## Components Directory
+
+### UI Components Structure
+The [components/](mdc:components) directory is organized with shadcn/ui architecture:
+
+```
+components/
+└── ui/                 # shadcn/ui component library
+    ├── accordion.tsx
+    ├── alert.tsx
+    ├── button.tsx
+    ├── card.tsx
+    ├── dialog.tsx
+    ├── form.tsx
+    ├── input.tsx
+    ├── sidebar.tsx
+    └── [40+ other components]
+```
+
+### Component Patterns
+- **Single Responsibility**: One component per file
+- **Consistent Naming**: PascalCase for component files (e.g., `Button.tsx`)
+- **Props Interface**: TypeScript interfaces for all component props
+- **Compound Components**: Complex components like `Dialog`, `Sheet`, `Command` use compound patterns
+- **Forwarded Refs**: All interactive components use `React.forwardRef`
+
+## Hooks Directory
+
+Custom React hooks in [hooks/](mdc:hooks):
+- [hooks/use-mobile.ts](mdc:hooks/use-mobile.ts) - Mobile breakpoint detection hook
+
+### Hook Conventions
+- **Naming**: All hooks prefixed with `use-` (kebab-case)
+- **Single Purpose**: Each hook handles one specific concern
+- **TypeScript**: Fully typed return values and parameters
+
+## Lib Directory
+
+Shared utilities and configurations in [lib/](mdc:lib):
+- [lib/utils.ts](mdc:lib/utils.ts) - Utility functions (currently includes `cn` for class merging)
+
+### Utility Patterns
+- **Small, Pure Functions**: Single-purpose utility functions
+- **Type Safety**: All utilities are fully typed
+- **Common Exports**: Frequently used utilities like `cn` for className merging
+
+## Naming Conventions
+
+### Files and Directories
+- **Components**: PascalCase (e.g., `Button.tsx`, `AlertDialog.tsx`)
+- **Hooks**: kebab-case with `use-` prefix (e.g., `use-mobile.ts`)
+- **Utilities**: kebab-case (e.g., `utils.ts`)
+- **Pages**: lowercase with App Router conventions (e.g., `page.tsx`, `layout.tsx`)
+
+### Code Conventions
+- **Variables**: camelCase
+- **Constants**: UPPER_SNAKE_CASE
+- **Types/Interfaces**: PascalCase
+- **CSS Classes**: Tailwind utility classes
+
+## Import Patterns
+
+### Path Aliasing
+- `@/*` - Points to workspace root (configured in [tsconfig.json](mdc:tsconfig.json))
+- Example: `import { Button } from "@/components/ui/button"`
+
+### Import Organization
+1. External libraries (React, Next.js, etc.)
+2. Internal components and utilities
+3. Types and interfaces
+4. Relative imports
+
+## Configuration Files Structure
+
+### TypeScript Configuration
+- [tsconfig.json](mdc:tsconfig.json) - Strict TypeScript settings with Next.js optimizations
+
+### Linting Configuration  
+- [eslint.config.mjs](mdc:eslint.config.mjs) - ESLint with Next.js and TypeScript rules
+
+### Build Configuration
+- [next.config.ts](mdc:next.config.ts) - Next.js configuration
+- [postcss.config.mjs](mdc:postcss.config.mjs) - PostCSS with Tailwind
+
+### Component Library Configuration
+- [components.json](mdc:mcd:components.json) - shadcn/ui configuration for component generation
+
+## Future Structure Considerations
+
+As the project grows, expect these additional directories:
+- `app/(auth)/` - Authentication-related pages
+- `app/(dashboard)/` - Dashboard and learning interface pages  
+- `components/forms/` - Form-specific components
+- `components/learning/` - Learning journey components
+- `lib/supabase.ts` - Supabase client configuration
+- `lib/openai.ts` - OpenAI API client
+- `types/` - Shared TypeScript type definitions
+- `constants/` - Application constants and configurations

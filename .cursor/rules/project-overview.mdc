@@ -1,0 +1,78 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Project Overview - Pathwise
+
+## What is Pathwise?
+
+Pathwise is an AI-powered learning platform where users can define any learning goal — from technical skills to personal growth — and receive a personalized, adaptive learning journey. The platform provides structured guidance, real-time progress tracking, and continuous adaptation to help users master any topic.
+
+## Core Tech Stack
+
+### Frontend Framework
+- **Next.js 15** with App Router architecture
+- **React 19** for component-based UI
+- **TypeScript** with strict mode enabled for type safety
+
+### Styling & Design System  
+- **Tailwind CSS v4** for utility-first styling
+- **shadcn/ui** component library with 40+ pre-built components
+- **Radix UI** primitives for accessible, unstyled components
+- **Lucide React** for consistent iconography
+- **Framer Motion** for smooth animations
+
+### Development Tools
+- **ESLint** with Next.js recommended configuration
+- **PostCSS** for CSS processing
+- **Turbopack** for fast development builds
+
+### Planned Integrations
+- **Supabase** for authentication, database, and storage
+- **OpenAI GPT-4o** API for AI-powered features
+- **Stripe** for payment processing
+
+## Build System & Configuration
+
+### Main Configuration Files
+- [package.json](mdc:package.json) - Dependencies and npm scripts
+- [tsconfig.json](mdc:tsconfig.json) - TypeScript compiler configuration  
+- [eslint.config.mjs](mdc:eslint.config.mjs) - Linting rules
+- [next.config.ts](mdc:next.config.ts) - Next.js configuration
+- [components.json](mdc:components.json) - shadcn/ui configuration
+
+### Build Commands
+- `npm run dev` - Development server with Turbopack
+- `npm run build` - Production build
+- `npm run start` - Production server
+- `npm run lint` - Code linting
+
+## Application Entry Points
+
+### Main Entry Point
+- [app/page.tsx](mdc:app/page.tsx) - Homepage component
+- [app/layout.tsx](mdc:app/layout.tsx) - Root layout with fonts and global styles
+
+### Global Styles
+- [app/globals.css](mdc:app/globals.css) - Global CSS including Tailwind imports
+
+## Key Features (MVP Phase 1)
+
+1. **Conversational Goal Scoping** - AI-driven goal clarification
+2. **Skill Assessment** - Contextual questions to determine learning level
+3. **Personalized Curriculum Builder** - AI-generated learning paths
+4. **Learning Journey Dashboard** - Visual progress tracking
+5. **Dynamic Learning Adaptation** - Pace adjustment based on performance
+6. **AI Learning Assistant** - Inline chat for concept clarification
+7. **User Authentication & Persistence** - Progress saving and user profiles
+
+## Development Status
+
+Currently in early development phase with:
+- ✅ Next.js foundation established
+- ✅ shadcn/ui design system implemented
+- ✅ TypeScript configuration complete
+- 🔄 Supabase integration pending
+- 🔄 OpenAI API integration pending
+- 🔄 Core learning features in development
