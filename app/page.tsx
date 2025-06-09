@@ -1,7 +1,9 @@
+import { Header } from "@/components/ui/header"
+
 export default function Home() {
   return (
-    <main>
-      <h1>Pathwise</h1>
-    </main>
+    <div className="min-h-screen">
+      <Header />
+    </div>
   );
 }
