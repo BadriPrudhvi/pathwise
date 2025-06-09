@@ -5,12 +5,6 @@ import { TestimonialsColumn } from "@/components/ui/testimonials-columns";
 
 const testimonials = [
   {
-    text: "Pathwise transformed my backend development journey. The AI-powered curriculum adapted perfectly to my learning pace, and I landed my dream job in just 3 months!",
-    image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
-    name: "Sarah Chen",
-    role: "Full-Stack Developer",
-  },
-  {
     text: "The conversational goal scoping was incredible. Pathwise helped me break down 'learn machine learning' into actionable steps. Now I'm building ML models at work!",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
     name: "Marcus Johnson",
