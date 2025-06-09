@@ -23,7 +23,6 @@ export function Header() {
   const navigationLinks = [
     { href: "#how-it-works", label: "How It Works" },
     { href: "#learning-paths", label: "Learning Paths" },
-    { href: "#mentors", label: "Mentors" },
     { href: "#pricing", label: "Pricing" },
   ]
 
