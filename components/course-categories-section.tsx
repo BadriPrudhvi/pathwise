@@ -74,52 +74,54 @@ const courseCategories = [
 
 export function CourseCategoriesSection() {
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+    <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gray-50" aria-labelledby="categories-heading">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl mb-4">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 id="categories-heading" className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
             Master Skills That Matter in Today&apos;s World
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">
             Choose from our most in-demand learning categories. Our AI will create a personalized curriculum 
             tailored to your goals, experience level, and learning style.
           </p>
         </div>
 
         {/* 2-Column Grid Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6" role="list" aria-label="Learning categories">
           {courseCategories.map((category) => {
             const IconComponent = category.icon
             return (
               <Link 
                 key={category.id} 
                 href={`/start?goal=${encodeURIComponent(category.prefillGoal)}`}
-                className="block"
+                className="block focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 rounded-lg"
+                aria-label={`Start learning ${category.title} - ${category.description}`}
+                role="listitem"
               >
                 <Card className={`h-full transition-all duration-300 hover:shadow-lg hover:scale-[1.02] cursor-pointer ${category.color} border-0`}>
-                  <CardContent className="p-6">
-                    <div className="flex items-start space-x-4">
+                  <CardContent className="p-4 sm:p-6">
+                    <div className="flex items-start space-x-3 sm:space-x-4">
                       {/* Icon */}
-                      <div className={`flex-shrink-0 p-3 rounded-lg bg-white shadow-sm`}>
-                        <IconComponent className={`w-6 h-6 ${category.iconColor}`} />
+                      <div className={`flex-shrink-0 p-2 sm:p-3 rounded-lg bg-white shadow-sm`}>
+                        <IconComponent className={`w-5 h-5 sm:w-6 sm:h-6 ${category.iconColor}`} aria-hidden="true" />
                       </div>
                       
                       {/* Content */}
                       <div className="flex-1 min-w-0">
-                        <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                        <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">
                           {category.title}
                         </h3>
-                        <p className="text-gray-600 text-sm mb-4 leading-relaxed">
+                        <p className="text-gray-600 text-sm sm:text-base mb-3 sm:mb-4 leading-relaxed">
                           {category.description}
                         </p>
                         
                         {/* Subcategories */}
-                        <div className="flex flex-wrap gap-2">
+                        <div className="flex flex-wrap gap-1.5 sm:gap-2">
                           {category.subcategories.map((subcategory, index) => (
                             <span 
                               key={index}
-                              className="inline-block px-3 py-1 text-xs font-medium text-gray-700 bg-white rounded-full shadow-sm"
+                              className="inline-block px-2 py-1 sm:px-3 text-xs font-medium text-gray-700 bg-white rounded-full shadow-sm"
                             >
                               {subcategory}
                             </span>
@@ -135,13 +137,14 @@ export function CourseCategoriesSection() {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center mt-12">
-          <p className="text-gray-600 mb-4">
+        <div className="text-center mt-8 sm:mt-12">
+          <p className="text-gray-600 mb-4 text-sm sm:text-base">
             Have a specific goal in mind? Our AI can create a learning path for absolutely anything.
           </p>
           <Link 
             href="/start" 
-            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
+            className="inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 border border-transparent text-sm sm:text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
+            aria-label="Create your custom learning path with AI assistance"
           >
             Create Your Custom Learning Path
           </Link>

@@ -4,12 +4,12 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 const popularGoals = [
   {
     id: 1,
-    title: "Frontend Development",
-    description: "Master modern web development with React, TypeScript, and cutting-edge frameworks.",
+    title: "Backend Development",
+    description: "Master server-side programming with APIs, databases, and deployment. Build scalable applications from scratch.",
     image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400&h=250&fit=crop&crop=center",
     instructor: {
       name: "Sarah Chen",
-      title: "Senior Frontend Engineer",
+      title: "Senior Backend Engineer",
       avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=40&h=40&fit=crop&crop=face",
       initials: "SC"
     },
@@ -17,12 +17,12 @@ const popularGoals = [
   },
   {
     id: 2,
-    title: "Language Learning",
-    description: "Become fluent in Spanish, French, or any language with personalized conversation practice.",
-    image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=400&h=250&fit=crop&crop=center",
+    title: "Data Science & AI",
+    description: "Learn Python, machine learning, and data analysis. Build AI models and extract insights from data.",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop&crop=center",
     instructor: {
-      name: "Maria Rodriguez",
-      title: "Language Specialist",
+      name: "Dr. Maria Rodriguez",
+      title: "AI Research Scientist",
       avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=40&h=40&fit=crop&crop=face",
       initials: "MR"
     },
@@ -31,7 +31,7 @@ const popularGoals = [
   {
     id: 3,
     title: "Public Speaking",
-    description: "Build confidence and master the art of compelling presentations and communication.",
+    description: "Build confidence and master compelling presentations. Overcome anxiety and communicate with impact.",
     image: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=400&h=250&fit=crop&crop=center",
     instructor: {
       name: "David Thompson",
@@ -45,44 +45,53 @@ const popularGoals = [
 
 export function PopularGoalsSection() {
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+    <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-white" aria-labelledby="popular-goals-heading">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 id="popular-goals-heading" className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
             Our Most Pursued Learning Paths
           </h2>
+          <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">
+            Join thousands of learners mastering these in-demand skills with AI-powered personalized curricula
+          </p>
         </div>
 
         {/* 3-Column Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {popularGoals.map((goal) => (
-            <Card key={goal.id} className={`overflow-hidden hover:shadow-lg transition-shadow duration-300 ${goal.bgColor}`}>
+            <Card 
+              key={goal.id} 
+              className={`overflow-hidden hover:shadow-lg transition-all duration-300 hover:scale-105 ${goal.bgColor}`}
+              role="article"
+              aria-labelledby={`goal-title-${goal.id}`}
+            >
               <CardContent className="p-0">
                 {/* Full-width Image */}
                 <div className="aspect-video w-full overflow-hidden">
                   <img
                     src={goal.image}
-                    alt={goal.title}
+                    alt={`${goal.title} learning path illustration`}
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
                   />
                 </div>
                 
                 {/* Content */}
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                <div className="p-4 sm:p-6">
+                  <h3 id={`goal-title-${goal.id}`} className="text-lg sm:text-xl font-semibold text-gray-900 mb-3">
                     {goal.title}
                   </h3>
                   
                   {/* Short paragraph */}
-                  <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                  <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-4">
                     {goal.description}
                   </p>
                   
                   {/* Avatar + Instructor Info */}
                   <div className="flex items-center space-x-3">
                     <Avatar className="w-10 h-10">
-                      <AvatarImage src={goal.instructor.avatar} alt={goal.instructor.name} />
+                      <AvatarImage src={goal.instructor.avatar} alt={`${goal.instructor.name} profile picture`} />
                       <AvatarFallback className="bg-gray-200 text-gray-700 text-sm font-medium">
                         {goal.instructor.initials}
                       </AvatarFallback>
