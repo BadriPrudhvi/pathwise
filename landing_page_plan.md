@@ -197,21 +197,21 @@
 
 ### Functional QA
 
-* [ ] Confirm all CTAs (Search, Choose Plan, Sign Up) link to appropriate pages
-* [ ] Validate layout rendering on mobile, tablet, desktop
-* [ ] Test sticky nav and footer scroll behavior
+* [x] Confirm all CTAs (Search, Choose Plan, Sign Up) link to appropriate pages
+* [x] Validate layout rendering on mobile, tablet, desktop
+* [x] Test sticky nav and footer scroll behavior
 
 ### Visual QA
 
-* [ ] Image rendering quality across devices
-* [ ] Check visual spacing between sections
-* [ ] Validate heading hierarchy and text balance
+* [x] Image rendering quality across devices
+* [x] Check visual spacing between sections
+* [x] Validate heading hierarchy and text balance
 
 ### Performance & SEO
 
-* [ ] Optimize all image loads (`next/image` if used)
-* [ ] Set proper meta tags (`title`, `description`, `og:image`)
-* [ ] Lighthouse score ≥90 for performance and accessibility
+* [x] Optimize all image loads (`next/image` if used)
+* [x] Set proper meta tags (`title`, `description`, `og:image`)
+* [x] Lighthouse score ≥90 for performance and accessibility
 
 ---
 
@@ -224,10 +224,9 @@ A --> B[Hero Section]
 B --> C[Popular Goals]
 C --> D[How It Works]
 D --> E[What Makes Us Different]
-E --> F[Mentor Showcase]
-F --> G[Pricing Section]
-G --> H[Course Categories]
-H --> I[Footer]
+E --> F[Pricing Section]
+F --> G[Course Categories]
+G --> H[Footer]
 ```
 
 ---
