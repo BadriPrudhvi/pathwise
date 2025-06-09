@@ -5,6 +5,7 @@ import { HowItWorksSection } from "@/components/how-it-works-section"
 import { UniqueSellingPointsSection } from "@/components/unique-selling-points-section"
 import { PricingSection } from "@/components/pricing-section"
 import { CourseCategoriesSection } from "@/components/course-categories-section"
+import { Footer } from "@/components/footer"
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <UniqueSellingPointsSection />
       <PricingSection />
       <CourseCategoriesSection />
+      <Footer />
     </div>
   );
 }
