@@ -1,5 +1,4 @@
-import { Header } from "@/components/header"
-import { HeroSection } from "@/components/hero-section"
+import InteractiveHero from "@/components/hero-section"
 import { PopularGoalsSection } from "@/components/popular-goals-section"
 import { HowItWorksSection } from "@/components/how-it-works-section"
 import { UniqueSellingPointsSection } from "@/components/unique-selling-points-section"
@@ -10,8 +9,7 @@ import { Footer } from "@/components/footer"
 export default function Home() {
   return (
     <div className="min-h-screen">
-      <Header />
-      <HeroSection />
+      <InteractiveHero />
       <PopularGoalsSection />
       <HowItWorksSection />
       <UniqueSellingPointsSection />
